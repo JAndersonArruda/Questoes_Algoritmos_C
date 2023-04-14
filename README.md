@@ -1,1 +1,1 @@
-# Lista de Questoes da Disciplina de Algoritmos na Liguagem C
+# Lista de Questoes de Algoritmos na Liguagem C
