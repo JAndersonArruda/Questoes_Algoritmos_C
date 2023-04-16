@@ -7,7 +7,7 @@ const int IndicePorcentagem = 100;
 
 int calculoVariacao(float atual, float anterior){
     float diferenca = atual - anterior;
-    int equacao = (diferenca * IndicePorcentagem) / anterior;
+    float equacao = (diferenca * IndicePorcentagem) / ((int)anterior);
     return equacao;
 }
 
@@ -17,7 +17,7 @@ void main(){
     scanf("%f", &preco_atual);
     printf("Informe o preco anterior: ");
     scanf("%f", &preco_anterior);
-    int variacao = calculoVariacao(preco_atual, preco_anterior);
-    printf("A variacao  foi de: %d%% \n", variacao);
+    float variacao = calculoVariacao(preco_atual, preco_anterior);
+    printf("A variacao  foi de: %.2f%% \n", variacao);
     getch();
 }
