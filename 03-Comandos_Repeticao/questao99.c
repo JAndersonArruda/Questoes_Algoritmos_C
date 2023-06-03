@@ -1,4 +1,4 @@
-/*99. Escreva um programa que imprima todos os números inteiros entre 1 e 100 em ordem
+/*99. Escreva um programa que imprima todos os nï¿½meros inteiros entre 1 e 100 em ordem
 descendente.*/
 
 #include <stdio.h>
