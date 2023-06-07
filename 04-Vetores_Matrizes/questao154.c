@@ -7,7 +7,7 @@ const int Tamanho = 10;
 
 void main()
 {
-    int vet[10];
+    int vet[Tamanho];
     int a;
     for(a = 0; a < Tamanho; a ++)
     {
