@@ -7,3 +7,23 @@ percentual de acertos. O processamento deve ser encerrado quando for encontrado
 um candidato com o nome ´fim’, que não deve ser processado. O programa deve
 imprimir também a pontuação média dos candidatos.*/
 
+#include <stdio.h>
+#include <stdlib.h>
+
+const int Questoes = 10;
+
+void main()
+{
+    char vetGabarito[Questoes];
+    int numQuestao = 1;
+    int a;
+    printf("Informe o gabarito das questoes.\n\n");
+    for (a = 0; a < Questoes; a ++)
+    {
+        fflush(stdin);
+        printf("Questao %d. Alternativa correta (a, b, c, d ou e): ", numQuestao);
+        scanf("%c", &vetGabarito[a]);
+        numQuestao ++;
+    }
+
+}
