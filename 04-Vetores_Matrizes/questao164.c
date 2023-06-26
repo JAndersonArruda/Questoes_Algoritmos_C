@@ -8,80 +8,89 @@ const int Tamanho = 5;
 
 void main()
 {
-    int vet1[Tamanho];
-    int vet2[Tamanho];
-    int a;
-
+    int vetA[Tamanho];
+    int vetB[Tamanho];
+    
     printf("Preenchendo o primeiro vetor...\n");
-    for (a = 0; a < Tamanho; a ++);
+    int a;
+    for(a = 0; a < Tamanho; a ++)
     {
         printf("Informe um numero inteiro: ");
-        scanf("%d", &vet1[a]);
+        scanf("%d", &vetA[a]);
     }
 
     printf("Preenchendo o segundo vetor...\n");
-    for (a = 0; a < Tamanho; a ++);
+    int b;
+    for(b = 0; b < Tamanho; b ++)
     {
         printf("Informe um numero inteiro: ");
-        scanf("%d", &vet2[a]);
+        scanf("%d", &vetB[b]);
     }
-    int indice = Tamanho;
-    int i;
-    for (a = 0; a < Tamanho; a ++);
+
+    int vetC[Tamanho];
+    int k;
+    for(k = 0; k < Tamanho; k ++)
     {
-        int cont = 0;
-        for (i = 0; i < Tamanho; i ++)
+        vetC[k] = vetA[k];
+    }
+
+    // verificação de repetição de numero
+
+    for(k = 0; k < Tamanho; k ++)
+    {
+        int indi = 0;
+        int l;
+        for(l = 0; l < Tamanho; l ++)
         {
-            if (vet1[i] != vet2[a]);
+            if(vetC[k] == vetC[l])
             {
-                cont ++;
+                indi ++;
+            }
+            if(indi > 1)
+            {
+                int g;
+                for(g = 0; g < Tamanho; g ++)
+                {
+                    if(vetC[k] != vetB[g])
+                    {
+                        int contSecund = 0;
+                        int h;
+                        for(h = 0; h < Tamanho; h ++)
+                        {
+                            if(vetB[g] == vetC[h])
+                            {
+                                contSecund ++;
+                            }
+                        }
+                        if (contSecund == 0)
+                        {
+                            vetC[k] = vetB[g];
+                        }
+                    }
+                }
             }
         }
-        if (cont == Tamanho)
-        {
-            indice ++;
-        }
     }
+
+
+    // impressão dos Vetores 
     
-    int vet3[indice];
+    printf("\nImprimindo Vetor A: ");
     for (a = 0; a < Tamanho; a ++)
     {
-        vet3[a] = vet1[a];
+        printf("%d ", vetA[a]);
     }
 
-    int k = 0;
-    for (a = 0; a < Tamanho; a ++);
+    printf("\nImprimindo Vetor B: ");
+    for (b = 0; b < Tamanho; b ++)
     {
-        int cont = 0;
-        for (i = 0; i < Tamanho; i ++)
-        {
-            if (vet1[i] != vet2[a]);
-            {
-                cont ++;
-            }
-        }
-        if (cont == Tamanho)
-        {
-            vet3[(Tamanho)+k] = vet2[a];
-            k ++;
-        }
+        printf("%d ", vetB[b]);
     }
 
-    printf("\nVetor 1: ");
-    for (a = 0; a < Tamanho; a ++)
+    printf("\nImprimindo Vetor C: ");
+    for (k = 0; k < Tamanho; k ++)
     {
-        printf("%d ", vet1[a]);
+        printf("%d ", vetC[k]);
     }
-
-    printf("\nVetor 2: ");
-    for (a = 0; a < Tamanho; a ++)
-    {
-        printf("%d ", vet2[a]);
-    }
-
-    printf("\nVetor 3: ");
-    for (a = 0; a < indice; a ++)
-    {
-        printf("%d ", vet3[a]);
-    }
+    getch();
 }
