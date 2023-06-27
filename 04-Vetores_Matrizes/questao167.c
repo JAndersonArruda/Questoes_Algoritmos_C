@@ -9,21 +9,46 @@ void main()
 {
     int vet[Tamanho];
     int a;
-    for (a = 0; a < Tamanho; a ++)
+    for(a = 0; a < Tamanho; a ++)
     {
         printf("Informe um numero inteiro: ");
         scanf("%d", &vet[a]);
     }
+
+    // imprimindo o vetror em ordem normal
+    printf("\nImprimindo vetor antes da ordenação crescente: ");
+    for(a = 0; a < Tamanho; a ++)
+    {
+        printf("%d ", vet[a]);
+    }
+
+    // ordenação crescente
+    for(a = 0; a < Tamanho-1; a ++)
+    {
+        // possicão menor
+        int posMenor = a;
+        int k;
+        for(k = posMenor+1; k < Tamanho; k ++)
+        {
+            if(vet[k] < vet[posMenor])
+            {
+                posMenor = k;
+            }
+        }
+        // permutando valores
+        if(a != posMenor)
+        {
+            int aux = vet[a];
+            vet[a] = vet[posMenor];
+            vet[posMenor] = aux;
+        }
+    }
+
+    // imprimindo o vetror em ordem crescente
+    printf("\nImprimindo vetor em ordem crescente: ");
+    for(a = 0; a < Tamanho; a ++)
+    {
+        printf("%d ", vet[a]);
+    }
+    getch();
 }
-
- 0 1 2 3 4 5  6 7  8 9
-[9' 4 5 7 8 5 33 5- 66 8]
-
-[4 5 5 5 7 8 8 9' 33 66]
-
-0 = 
-começa em 1, a cada menor cont 1
-aux = vet[Tamanho-1-cont];
-vet2[Tamanho-1-cont] = vet[a];
-    detro um for, começa em 0, comparo o aux com todo o vetor <, falta os avlores iguais
-

@@ -15,27 +15,26 @@ void main()
         quociente = quociente / Binary;
         cont ++;
     }
-    int vet[cont];
-    int a;
-    int limit = cont - 1;
     quociente = num;
+    int vetBin[cont];
+    int limit = cont-1;
+    int a;
     for (a = 0; a < limit; a++)
     {
-        vet[a] = quociente % Binary;
+        vetBin[a] = quociente % Binary;
         quociente = quociente / Binary;
     }
-    printf("\n");
-    vet[cont-1] = quociente;
+    vetBin[cont-1] = quociente;
     for (a = 0; a < cont/2; a ++)
     {
-        int aux = vet[a];
-        vet[a] = vet[(cont-1)-a];
-        vet[(cont-1)-a] = aux;
+        int aux = vetBin[a];
+        vetBin[a] = vetBin[(cont-1)-a];
+        vetBin[(cont-1)-a] = aux;
     }
-    printf("O valor de %d em binario eh: ", num);
+    printf("\nO valor de %d em binario eh: ", num);
     for (a = 0; a < cont; a ++)
     {
-        printf("%d", vet[a]);
+        printf("%d", vetBin[a]);
     }
     getch();
 }
