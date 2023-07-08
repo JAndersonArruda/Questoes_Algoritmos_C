@@ -42,3 +42,5 @@ void imprimir(Pilha *p)
         marc = marc ->proximo;
     }
 }
+
+//crie seu proprio procedimento principal para testar

@@ -45,3 +45,5 @@ int max(Pilha *p)
     }
     return maxNumber;
 }
+
+//crie seu proprio procedimento principal para testar
